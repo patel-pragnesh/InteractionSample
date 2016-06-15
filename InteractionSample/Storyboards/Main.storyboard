@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="HCo-yQ-JuU">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--Main Navigation Controller-->
+        <scene sceneID="CrF-zs-A6q">
+            <objects>
+                <navigationController storyboardIdentifier="MainNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="HCo-yQ-JuU" customClass="MainNavigationController" customModule="InteractionSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="5Za-5X-Nwi">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Dcu-Wx-bsT" kind="relationship" relationship="rootViewController" id="XDS-5B-nMt"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MuG-wj-tIp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-354" y="385"/>
+        </scene>
+        <!--Main View Controller-->
+        <scene sceneID="uuD-he-xOQ">
+            <objects>
+                <viewController storyboardIdentifier="MainViewController" automaticallyAdjustsScrollViewInsets="NO" id="Dcu-Wx-bsT" customClass="MainViewController" customModule="InteractionSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Oek-0f-kNg"/>
+                        <viewControllerLayoutGuide type="bottom" id="sfP-XR-wX1"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kfe-Wk-cvO">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="A7T-sl-M2N">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="A7T-sl-M2N" secondAttribute="trailing" id="Lsk-l9-qTh"/>
+                            <constraint firstItem="sfP-XR-wX1" firstAttribute="top" secondItem="A7T-sl-M2N" secondAttribute="bottom" id="QBw-aZ-d1T"/>
+                            <constraint firstItem="A7T-sl-M2N" firstAttribute="leading" secondItem="kfe-Wk-cvO" secondAttribute="leading" id="XxB-ES-UV8"/>
+                            <constraint firstItem="A7T-sl-M2N" firstAttribute="top" secondItem="Oek-0f-kNg" secondAttribute="bottom" id="eDP-v8-uCa"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="8cN-BD-hDx"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="tableView" destination="A7T-sl-M2N" id="2Wx-kQ-bda"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Uz9-PN-S2Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="127.5" y="384.5"/>
+        </scene>
+    </scenes>
+</document>

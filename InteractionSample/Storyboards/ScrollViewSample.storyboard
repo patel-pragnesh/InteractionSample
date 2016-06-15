@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--Scroll Zoom View Controller-->
+        <scene sceneID="8AU-6j-99A">
+            <objects>
+                <viewController storyboardIdentifier="ScrollZoomViewController" id="bTw-hn-Il9" customClass="ScrollZoomViewController" customModule="InteractionSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gwg-HJ-Z2m"/>
+                        <viewControllerLayoutGuide type="bottom" id="TpW-iH-SKW"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="NQ3-dA-9WD">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mhw-AR-2gd">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </scrollView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PDu-kY-kLF">
+                                <rect key="frame" x="20" y="10" width="34" height="30"/>
+                                <state key="normal" title="Back"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="PDu-kY-kLF" firstAttribute="leading" secondItem="NQ3-dA-9WD" secondAttribute="leading" constant="20" id="4bn-8v-8nr"/>
+                            <constraint firstAttribute="trailing" secondItem="mhw-AR-2gd" secondAttribute="trailing" id="Gt7-SS-BlB"/>
+                            <constraint firstItem="mhw-AR-2gd" firstAttribute="top" secondItem="gwg-HJ-Z2m" secondAttribute="bottom" id="IkN-eg-1j0"/>
+                            <constraint firstItem="mhw-AR-2gd" firstAttribute="leading" secondItem="NQ3-dA-9WD" secondAttribute="leading" id="MD6-E0-tbi"/>
+                            <constraint firstItem="TpW-iH-SKW" firstAttribute="top" secondItem="mhw-AR-2gd" secondAttribute="bottom" id="PQX-gV-UpS"/>
+                            <constraint firstItem="PDu-kY-kLF" firstAttribute="top" secondItem="gwg-HJ-Z2m" secondAttribute="bottom" constant="10" id="Re6-5R-e7G"/>
+                            <constraint firstItem="mhw-AR-2gd" firstAttribute="leading" secondItem="PDu-kY-kLF" secondAttribute="trailing" id="mFv-w2-FwB"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="mFv-w2-FwB"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="backButton" destination="PDu-kY-kLF" id="2zC-k8-Mi3"/>
+                        <outlet property="scrollView" destination="mhw-AR-2gd" id="QON-rA-OLn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jzr-Gr-z1T" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="545.5" y="465.5"/>
+        </scene>
+    </scenes>
+</document>
