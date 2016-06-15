@@ -26,8 +26,16 @@ struct R: Rswift.Validatable {
     private init() {}
   }
   
-  /// This `R.image` struct is generated, and contains static references to 0 images.
+  /// This `R.image` struct is generated, and contains static references to 1 images.
   struct image {
+    /// Image `ScrollView-Background`.
+    static let scrollViewBackground = ImageResource(bundle: _R.hostingBundle, name: "ScrollView-Background")
+    
+    /// `UIImage(named: "ScrollView-Background", bundle: ..., traitCollection: ...)`
+    static func scrollViewBackground(compatibleWithTraitCollection traitCollection: UITraitCollection? = nil) -> UIImage? {
+      return UIImage(resource: R.image.scrollViewBackground, compatibleWithTraitCollection: traitCollection)
+    }
+    
     private init() {}
   }
   
@@ -169,6 +177,7 @@ struct _R: Rswift.Validatable {
       }
       
       static func validate() throws {
+        if UIImage(named: "ScrollView-Background") == nil { throw ValidationError(description: "[R.swift] Image named 'ScrollView-Background' is used in storyboard 'ScrollViewSample', but couldn't be loaded.") }
         if _R.storyboard.scrollViewSample().scrollZoomViewController() == nil { throw ValidationError(description:"[R.swift] ViewController with identifier 'scrollZoomViewController' could not be loaded from storyboard 'ScrollViewSample' as 'ScrollZoomViewController'.") }
       }
       

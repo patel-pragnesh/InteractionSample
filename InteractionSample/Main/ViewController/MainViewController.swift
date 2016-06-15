@@ -68,7 +68,9 @@ class MainViewController: UIViewController {
     private func pageControl(sectionItem sectionItem: MainSectionItem) {
         switch sectionItem {
         case let .ScrollViewSectionItem(type):
-            self.presentViewController(type.viewController, animated: true, completion: nil)
+            dispatch_async(dispatch_get_main_queue(), {
+                self.presentViewController(type.viewController, animated: true, completion: nil)
+            })
         default:
             print("no page")
         }

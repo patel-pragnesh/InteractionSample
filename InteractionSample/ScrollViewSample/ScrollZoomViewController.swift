@@ -14,13 +14,20 @@ class ScrollZoomViewController: UIViewController {
     
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var backButton: UIButton!
+    @IBOutlet weak var zoomViewTopConst: NSLayoutConstraint!
+    @IBOutlet weak var imageBaseViewHeightConst: NSLayoutConstraint!
+    
+    private let IMAGEVIEWHEIGHT: CGFloat = UIScreen.mainScreen().bounds.size.width
+    private let ZOOMVIEWHEIGHT: CGFloat  = 205
     
     private let disposeBag = DisposeBag()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        imageBaseViewHeightConst.constant = IMAGEVIEWHEIGHT
         binding()
     }
+
     
     private func binding() {
         backButton.rx_tap
@@ -28,6 +35,20 @@ class ScrollZoomViewController: UIViewController {
             .subscribeNext { (_) in
                 self.goToPrev()
             }
+            .addDisposableTo(disposeBag)
+        
+        scrollView.rx_contentOffset
+            .asDriver()
+            .map { $0.y + (self.IMAGEVIEWHEIGHT - self.ZOOMVIEWHEIGHT)/2 }
+            .filter { $0 <= 0 }
+            .drive(zoomViewTopConst.rx_constant)
+            .addDisposableTo(disposeBag)
+        scrollView.rx_contentOffset
+            .asDriver()
+            .map { $0.y + self.IMAGEVIEWHEIGHT - self.ZOOMVIEWHEIGHT}
+            .filter { $0 <= 0 }
+            .map { self.IMAGEVIEWHEIGHT - $0 }
+            .drive(imageBaseViewHeightConst.rx_constant)
             .addDisposableTo(disposeBag)
     }
     

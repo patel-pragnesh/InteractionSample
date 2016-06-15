@@ -3,6 +3,8 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Scroll Zoom View Controller-->
@@ -17,35 +19,105 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mhw-AR-2gd">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mhw-AR-2gd">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hQU-74-zRe" userLabel="Base View">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="500"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kEl-Lf-3Kw" userLabel="Zoom View">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="205"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Huy-10-0i7" userLabel="Image Base View">
+                                                        <rect key="frame" x="0.0" y="-85" width="375" height="375"/>
+                                                        <subviews>
+                                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ScrollView-Background" translatesAutoresizingMaskIntoConstraints="NO" id="OfV-xQ-Pym">
+                                                                <rect key="frame" x="0.0" y="0.0" width="375" height="375"/>
+                                                            </imageView>
+                                                        </subviews>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="bottom" secondItem="OfV-xQ-Pym" secondAttribute="bottom" id="1NJ-N4-kni"/>
+                                                            <constraint firstAttribute="width" secondItem="Huy-10-0i7" secondAttribute="height" multiplier="1:1" id="1cj-dr-RTU"/>
+                                                            <constraint firstAttribute="trailing" secondItem="OfV-xQ-Pym" secondAttribute="trailing" id="D12-LM-cuK"/>
+                                                            <constraint firstItem="OfV-xQ-Pym" firstAttribute="top" secondItem="Huy-10-0i7" secondAttribute="top" id="E7e-nl-L97"/>
+                                                            <constraint firstItem="OfV-xQ-Pym" firstAttribute="leading" secondItem="Huy-10-0i7" secondAttribute="leading" id="VT9-mD-U3B"/>
+                                                            <constraint firstAttribute="height" constant="375" id="YcE-sD-fpq"/>
+                                                        </constraints>
+                                                    </view>
+                                                </subviews>
+                                                <color key="backgroundColor" red="0.95686274510000002" green="0.43921568630000002" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstItem="Huy-10-0i7" firstAttribute="centerY" secondItem="kEl-Lf-3Kw" secondAttribute="centerY" id="8Te-UP-s1e"/>
+                                                    <constraint firstItem="Huy-10-0i7" firstAttribute="centerX" secondItem="kEl-Lf-3Kw" secondAttribute="centerX" id="Coc-GX-qeO"/>
+                                                    <constraint firstItem="Huy-10-0i7" firstAttribute="centerY" secondItem="kEl-Lf-3Kw" secondAttribute="centerY" id="KXu-pa-3da"/>
+                                                    <constraint firstItem="Huy-10-0i7" firstAttribute="centerX" secondItem="kEl-Lf-3Kw" secondAttribute="centerX" id="aAI-L8-5US"/>
+                                                    <constraint firstItem="Huy-10-0i7" firstAttribute="top" secondItem="kEl-Lf-3Kw" secondAttribute="top" id="btv-Fi-VFe"/>
+                                                    <constraint firstAttribute="height" constant="205" id="g6A-Lp-Htv"/>
+                                                </constraints>
+                                                <variation key="default">
+                                                    <mask key="constraints">
+                                                        <exclude reference="8Te-UP-s1e"/>
+                                                        <exclude reference="Coc-GX-qeO"/>
+                                                        <exclude reference="btv-Fi-VFe"/>
+                                                    </mask>
+                                                </variation>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gVT-Cd-Pth" userLabel="Content View">
+                                                <rect key="frame" x="0.0" y="200" width="375" height="300"/>
+                                                <color key="backgroundColor" red="0.94117647059999998" green="0.94117647059999998" blue="0.94117647059999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="300" id="yOC-UF-IcT"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="kEl-Lf-3Kw" firstAttribute="top" secondItem="hQU-74-zRe" secondAttribute="top" id="5zV-M0-ovY"/>
+                                            <constraint firstItem="gVT-Cd-Pth" firstAttribute="leading" secondItem="hQU-74-zRe" secondAttribute="leading" id="9a0-hg-ZcF"/>
+                                            <constraint firstItem="gVT-Cd-Pth" firstAttribute="top" secondItem="hQU-74-zRe" secondAttribute="top" constant="200" id="DIR-HE-Ghb"/>
+                                            <constraint firstAttribute="trailing" secondItem="kEl-Lf-3Kw" secondAttribute="trailing" id="fxG-Hk-wCs"/>
+                                            <constraint firstAttribute="trailing" secondItem="gVT-Cd-Pth" secondAttribute="trailing" id="hlo-Xn-yfa"/>
+                                            <constraint firstItem="kEl-Lf-3Kw" firstAttribute="leading" secondItem="hQU-74-zRe" secondAttribute="leading" id="iGH-ee-PNR"/>
+                                            <constraint firstAttribute="bottom" secondItem="gVT-Cd-Pth" secondAttribute="bottom" id="xSf-VM-6m3"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="hQU-74-zRe" firstAttribute="width" secondItem="mhw-AR-2gd" secondAttribute="width" id="ZBb-Ch-pd1"/>
+                                    <constraint firstAttribute="bottom" secondItem="hQU-74-zRe" secondAttribute="bottom" id="b54-5L-KVe"/>
+                                    <constraint firstItem="hQU-74-zRe" firstAttribute="top" secondItem="mhw-AR-2gd" secondAttribute="top" id="bWX-b0-nJ1"/>
+                                    <constraint firstItem="hQU-74-zRe" firstAttribute="leading" secondItem="mhw-AR-2gd" secondAttribute="leading" id="nMt-Pf-SBS"/>
+                                    <constraint firstAttribute="trailing" secondItem="hQU-74-zRe" secondAttribute="trailing" id="rdB-9O-w4c"/>
+                                </constraints>
                             </scrollView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PDu-kY-kLF">
                                 <rect key="frame" x="20" y="10" width="34" height="30"/>
                                 <state key="normal" title="Back"/>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="PDu-kY-kLF" firstAttribute="leading" secondItem="NQ3-dA-9WD" secondAttribute="leading" constant="20" id="4bn-8v-8nr"/>
+                            <constraint firstItem="mhw-AR-2gd" firstAttribute="top" secondItem="NQ3-dA-9WD" secondAttribute="top" id="CNX-AL-p27"/>
                             <constraint firstAttribute="trailing" secondItem="mhw-AR-2gd" secondAttribute="trailing" id="Gt7-SS-BlB"/>
                             <constraint firstItem="mhw-AR-2gd" firstAttribute="top" secondItem="gwg-HJ-Z2m" secondAttribute="bottom" id="IkN-eg-1j0"/>
                             <constraint firstItem="mhw-AR-2gd" firstAttribute="leading" secondItem="NQ3-dA-9WD" secondAttribute="leading" id="MD6-E0-tbi"/>
                             <constraint firstItem="TpW-iH-SKW" firstAttribute="top" secondItem="mhw-AR-2gd" secondAttribute="bottom" id="PQX-gV-UpS"/>
-                            <constraint firstItem="PDu-kY-kLF" firstAttribute="top" secondItem="gwg-HJ-Z2m" secondAttribute="bottom" constant="10" id="Re6-5R-e7G"/>
-                            <constraint firstItem="mhw-AR-2gd" firstAttribute="leading" secondItem="PDu-kY-kLF" secondAttribute="trailing" id="mFv-w2-FwB"/>
+                            <constraint firstItem="PDu-kY-kLF" firstAttribute="leading" secondItem="NQ3-dA-9WD" secondAttribute="leading" constant="20" id="TSW-Yf-VvN"/>
+                            <constraint firstItem="PDu-kY-kLF" firstAttribute="top" secondItem="NQ3-dA-9WD" secondAttribute="topMargin" constant="10" id="c8m-RR-LBA"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
-                                <exclude reference="mFv-w2-FwB"/>
+                                <exclude reference="IkN-eg-1j0"/>
                             </mask>
                         </variation>
                     </view>
-                    <nil key="simulatedStatusBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="backButton" destination="PDu-kY-kLF" id="2zC-k8-Mi3"/>
+                        <outlet property="imageBaseViewHeightConst" destination="YcE-sD-fpq" id="FOV-MB-moA"/>
                         <outlet property="scrollView" destination="mhw-AR-2gd" id="QON-rA-OLn"/>
+                        <outlet property="zoomViewTopConst" destination="5zV-M0-ovY" id="cdP-CL-ujO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jzr-Gr-z1T" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -53,4 +125,7 @@
             <point key="canvasLocation" x="545.5" y="465.5"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="ScrollView-Background" width="426" height="266"/>
+    </resources>
 </document>
