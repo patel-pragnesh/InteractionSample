@@ -26,14 +26,35 @@ struct R: Rswift.Validatable {
     private init() {}
   }
   
-  /// This `R.image` struct is generated, and contains static references to 1 images.
+  /// This `R.image` struct is generated, and contains static references to 4 images.
   struct image {
     /// Image `ScrollView-Background`.
     static let scrollViewBackground = ImageResource(bundle: _R.hostingBundle, name: "ScrollView-Background")
+    /// Image `ScrollView-Sample1`.
+    static let scrollViewSample1 = ImageResource(bundle: _R.hostingBundle, name: "ScrollView-Sample1")
+    /// Image `ScrollView-Sample2`.
+    static let scrollViewSample2 = ImageResource(bundle: _R.hostingBundle, name: "ScrollView-Sample2")
+    /// Image `ScrollView-Sample3`.
+    static let scrollViewSample3 = ImageResource(bundle: _R.hostingBundle, name: "ScrollView-Sample3")
     
     /// `UIImage(named: "ScrollView-Background", bundle: ..., traitCollection: ...)`
     static func scrollViewBackground(compatibleWithTraitCollection traitCollection: UITraitCollection? = nil) -> UIImage? {
       return UIImage(resource: R.image.scrollViewBackground, compatibleWithTraitCollection: traitCollection)
+    }
+    
+    /// `UIImage(named: "ScrollView-Sample1", bundle: ..., traitCollection: ...)`
+    static func scrollViewSample1(compatibleWithTraitCollection traitCollection: UITraitCollection? = nil) -> UIImage? {
+      return UIImage(resource: R.image.scrollViewSample1, compatibleWithTraitCollection: traitCollection)
+    }
+    
+    /// `UIImage(named: "ScrollView-Sample2", bundle: ..., traitCollection: ...)`
+    static func scrollViewSample2(compatibleWithTraitCollection traitCollection: UITraitCollection? = nil) -> UIImage? {
+      return UIImage(resource: R.image.scrollViewSample2, compatibleWithTraitCollection: traitCollection)
+    }
+    
+    /// `UIImage(named: "ScrollView-Sample3", bundle: ..., traitCollection: ...)`
+    static func scrollViewSample3(compatibleWithTraitCollection traitCollection: UITraitCollection? = nil) -> UIImage? {
+      return UIImage(resource: R.image.scrollViewSample3, compatibleWithTraitCollection: traitCollection)
     }
     
     private init() {}
@@ -47,14 +68,21 @@ struct R: Rswift.Validatable {
     private init() {}
   }
   
-  /// This `R.nib` struct is generated, and contains static references to 1 nibs.
+  /// This `R.nib` struct is generated, and contains static references to 2 nibs.
   struct nib {
     /// Nib `MainCell`.
     static let mainCell = _R.nib._MainCell()
+    /// Nib `ScrollHeaderView`.
+    static let scrollHeaderView = _R.nib._ScrollHeaderView()
     
     /// `UINib(name: "MainCell", bundle: ...)`
     static func mainCell(_: Void) -> UINib {
       return UINib(resource: R.nib.mainCell)
+    }
+    
+    /// `UINib(name: "ScrollHeaderView", bundle: ...)`
+    static func scrollHeaderView(_: Void) -> UINib {
+      return UINib(resource: R.nib.scrollHeaderView)
     }
     
     private init() {}
@@ -132,6 +160,17 @@ struct _R: Rswift.Validatable {
       private init() {}
     }
     
+    struct _ScrollHeaderView: NibResourceType {
+      let bundle = _R.hostingBundle
+      let name = "ScrollHeaderView"
+      
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [NSObject : AnyObject]? = nil) -> UIView? {
+        return instantiateWithOwner(ownerOrNil, options: optionsOrNil)[0] as? UIView
+      }
+      
+      private init() {}
+    }
+    
     private init() {}
   }
   
@@ -179,14 +218,20 @@ struct _R: Rswift.Validatable {
       let bundle = _R.hostingBundle
       let name = "ScrollViewSample"
       let scrollZoomViewController = StoryboardViewControllerResource<ScrollZoomViewController>(identifier: "ScrollZoomViewController")
+      let slideScrollSampleViewController = StoryboardViewControllerResource<SlideScrollSampleViewController>(identifier: "SlideScrollSampleViewController")
       
       func scrollZoomViewController(_: Void) -> ScrollZoomViewController? {
         return UIStoryboard(resource: self).instantiateViewController(scrollZoomViewController)
       }
       
+      func slideScrollSampleViewController(_: Void) -> SlideScrollSampleViewController? {
+        return UIStoryboard(resource: self).instantiateViewController(slideScrollSampleViewController)
+      }
+      
       static func validate() throws {
         if UIImage(named: "ScrollView-Background") == nil { throw ValidationError(description: "[R.swift] Image named 'ScrollView-Background' is used in storyboard 'ScrollViewSample', but couldn't be loaded.") }
         if _R.storyboard.scrollViewSample().scrollZoomViewController() == nil { throw ValidationError(description:"[R.swift] ViewController with identifier 'scrollZoomViewController' could not be loaded from storyboard 'ScrollViewSample' as 'ScrollZoomViewController'.") }
+        if _R.storyboard.scrollViewSample().slideScrollSampleViewController() == nil { throw ValidationError(description:"[R.swift] ViewController with identifier 'slideScrollSampleViewController' could not be loaded from storyboard 'ScrollViewSample' as 'SlideScrollSampleViewController'.") }
       }
       
       private init() {}

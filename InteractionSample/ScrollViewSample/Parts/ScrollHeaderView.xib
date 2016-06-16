@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ScrollHeaderView" customModule="InteractionSample" customModuleProvider="target">
+            <connections>
+                <outlet property="imageBaseView" destination="jJg-kZ-ZrI" id="8yv-uN-P2c"/>
+                <outlet property="sample1ImageView" destination="tcE-A2-1TP" id="WuK-39-j6U"/>
+                <outlet property="sample2ImageView" destination="qCm-ku-3MP" id="cqW-4m-waR"/>
+                <outlet property="sample3ImageView" destination="hAt-qc-9Du" id="zgt-wp-f2b"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jJg-kZ-ZrI">
+                    <rect key="frame" x="165" y="18" width="44" height="44"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ScrollView-Sample1" translatesAutoresizingMaskIntoConstraints="NO" id="tcE-A2-1TP">
+                            <rect key="frame" x="11" y="10" width="22" height="25"/>
+                        </imageView>
+                        <imageView userInteractionEnabled="NO" tag="2" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ScrollView-Sample2" translatesAutoresizingMaskIntoConstraints="NO" id="qCm-ku-3MP">
+                            <rect key="frame" x="13" y="10" width="19" height="25"/>
+                        </imageView>
+                        <imageView userInteractionEnabled="NO" tag="3" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ScrollView-Sample3" translatesAutoresizingMaskIntoConstraints="NO" id="hAt-qc-9Du">
+                            <rect key="frame" x="10" y="10" width="24" height="25"/>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="0GE-JG-pYL"/>
+                        <constraint firstItem="qCm-ku-3MP" firstAttribute="centerX" secondItem="jJg-kZ-ZrI" secondAttribute="centerX" id="81y-wt-TnW"/>
+                        <constraint firstItem="tcE-A2-1TP" firstAttribute="leading" secondItem="jJg-kZ-ZrI" secondAttribute="leading" id="Aq5-P6-0G0"/>
+                        <constraint firstItem="qCm-ku-3MP" firstAttribute="centerY" secondItem="jJg-kZ-ZrI" secondAttribute="centerY" id="FeM-hZ-F3Q"/>
+                        <constraint firstItem="hAt-qc-9Du" firstAttribute="centerY" secondItem="jJg-kZ-ZrI" secondAttribute="centerY" id="IPb-Yg-EYe"/>
+                        <constraint firstItem="tcE-A2-1TP" firstAttribute="centerX" secondItem="jJg-kZ-ZrI" secondAttribute="centerX" id="Mlv-7H-IVZ"/>
+                        <constraint firstAttribute="bottom" secondItem="tcE-A2-1TP" secondAttribute="bottom" id="X1e-Rx-8cx"/>
+                        <constraint firstItem="tcE-A2-1TP" firstAttribute="top" secondItem="jJg-kZ-ZrI" secondAttribute="top" id="bPu-F8-MCC"/>
+                        <constraint firstItem="hAt-qc-9Du" firstAttribute="centerX" secondItem="jJg-kZ-ZrI" secondAttribute="centerX" id="lLV-3T-mke"/>
+                        <constraint firstAttribute="trailing" secondItem="tcE-A2-1TP" secondAttribute="trailing" id="rqi-8v-inO"/>
+                        <constraint firstItem="tcE-A2-1TP" firstAttribute="centerY" secondItem="jJg-kZ-ZrI" secondAttribute="centerY" id="vA6-hW-PWU"/>
+                        <constraint firstAttribute="width" constant="44" id="zXM-bo-DW1"/>
+                    </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="Aq5-P6-0G0"/>
+                            <exclude reference="X1e-Rx-8cx"/>
+                            <exclude reference="bPu-F8-MCC"/>
+                            <exclude reference="rqi-8v-inO"/>
+                        </mask>
+                    </variation>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.95686274510000002" green="0.43921568630000002" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="jJg-kZ-ZrI" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="7i9-Aa-ssK"/>
+                <constraint firstItem="jJg-kZ-ZrI" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="VTa-EL-J4N"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="ScrollView-Sample1" width="22" height="25"/>
+        <image name="ScrollView-Sample2" width="19" height="25"/>
+        <image name="ScrollView-Sample3" width="24" height="25"/>
+    </resources>
+</document>

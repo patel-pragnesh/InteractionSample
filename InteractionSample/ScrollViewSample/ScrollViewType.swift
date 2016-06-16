@@ -10,11 +10,14 @@ import UIKit
 
 enum ScrollViewType {
     case ScrollZoom
+    case SlideScroll
     
     var name: String {
         switch self {
         case .ScrollZoom:
             return "ScrollZoom"
+        case .SlideScroll:
+            return "SlideScroll"
         }
     }
     
@@ -22,6 +25,9 @@ enum ScrollViewType {
         switch self {
         case .ScrollZoom:
             guard let vc = R.storyboard.scrollViewSample.scrollZoomViewController() else { return UIViewController() }
+            return vc
+        case .SlideScroll:
+            guard let vc = R.storyboard.scrollViewSample.slideScrollSampleViewController() else { return UIViewController() }
             return vc
         }
     }
