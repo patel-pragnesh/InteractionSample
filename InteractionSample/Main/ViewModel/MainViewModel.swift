@@ -15,11 +15,11 @@ class MainViewModel {
     
     private let sections: [MainSection] = [
         .ScrollViewSetion(title: "scrollView Interactions", items: [
-            .ScrollViewSectionItem(type: .ScrollZoom)
+                .ScrollViewSectionItem(type: .ScrollZoom)
             ]),
-        .CollectionViewSection(title: "collectionView Interactions", items: [
-            .CollectionViewSectionItem(name: "test")
-            ]),
+        .UITabBarSection(title: "UITabBar Interactions", items: [
+                .UITabBarSectionItem(type: .TabBarHide)
+            ])
     ]
     
     let dataSource = RxTableViewSectionedReloadDataSource<MainSection>()

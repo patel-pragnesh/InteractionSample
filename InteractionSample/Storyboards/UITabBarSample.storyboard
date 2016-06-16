@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--Push Hide Tab Bar Controller-->
+        <scene sceneID="r9A-d7-eO9">
+            <objects>
+                <tabBarController storyboardIdentifier="PushHideTabBarController" id="jcT-ib-zvA" customClass="PushHideTabBarController" customModule="InteractionSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="X1D-p3-2ZZ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="ecl-Ik-HfX" kind="relationship" relationship="viewControllers" id="m5z-c0-tp8"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HQn-du-EgI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-352" y="114"/>
+        </scene>
+        <!--Tab Bar Hide Navigation Controller-->
+        <scene sceneID="Uwh-Mg-mhn">
+            <objects>
+                <navigationController storyboardIdentifier="UITabBarHideNavigationController" navigationBarHidden="YES" id="ecl-Ik-HfX" customClass="UITabBarHideNavigationController" customModule="InteractionSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" systemItem="search" id="5Nr-4O-zcg"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="bGW-he-zpP">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="iY6-hg-rwc" kind="relationship" relationship="rootViewController" id="nn3-yN-gno"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fcm-Xa-uJl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="111.5" y="-130.5"/>
+        </scene>
+        <!--Tab Bar Sample1 View Controller-->
+        <scene sceneID="Odj-AE-NL6">
+            <objects>
+                <viewController storyboardIdentifier="UITabBarSample1ViewController" id="iY6-hg-rwc" customClass="UITabBarSample1ViewController" customModule="InteractionSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="XNs-ph-qXH"/>
+                        <viewControllerLayoutGuide type="bottom" id="Pwy-9X-1hP"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="nIR-x6-Uze">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5HL-gV-tBa">
+                                <rect key="frame" x="10" y="20" width="34" height="30"/>
+                                <state key="normal" title="Back"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tMF-98-Nrq">
+                                <rect key="frame" x="137" y="319" width="101" height="30"/>
+                                <state key="normal" title="PushNextPage"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="5HL-gV-tBa" firstAttribute="top" secondItem="XNs-ph-qXH" secondAttribute="bottom" constant="20" id="Tso-6G-erS"/>
+                            <constraint firstItem="tMF-98-Nrq" firstAttribute="centerX" secondItem="nIR-x6-Uze" secondAttribute="centerX" id="XU1-z0-it2"/>
+                            <constraint firstItem="tMF-98-Nrq" firstAttribute="centerY" secondItem="nIR-x6-Uze" secondAttribute="centerY" id="qHY-C4-N4h"/>
+                            <constraint firstItem="5HL-gV-tBa" firstAttribute="top" secondItem="nIR-x6-Uze" secondAttribute="top" constant="20" id="tuu-sL-eWB"/>
+                            <constraint firstItem="5HL-gV-tBa" firstAttribute="leading" secondItem="nIR-x6-Uze" secondAttribute="leading" constant="10" id="xv7-pe-dQf"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Tso-6G-erS"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" id="D0d-fu-scB"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="backButton" destination="5HL-gV-tBa" id="8Yf-uU-miL"/>
+                        <outlet property="pushNexPageButton" destination="tMF-98-Nrq" id="XtO-cm-2J7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CzE-5f-J6Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="544.5" y="-130.5"/>
+        </scene>
+    </scenes>
+</document>

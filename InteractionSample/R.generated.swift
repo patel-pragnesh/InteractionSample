@@ -70,7 +70,7 @@ struct R: Rswift.Validatable {
     private init() {}
   }
   
-  /// This `R.storyboard` struct is generated, and contains static references to 3 storyboards.
+  /// This `R.storyboard` struct is generated, and contains static references to 4 storyboards.
   struct storyboard {
     /// Storyboard `LaunchScreen`.
     static let launchScreen = _R.storyboard.launchScreen()
@@ -78,6 +78,8 @@ struct R: Rswift.Validatable {
     static let main = _R.storyboard.main()
     /// Storyboard `ScrollViewSample`.
     static let scrollViewSample = _R.storyboard.scrollViewSample()
+    /// Storyboard `UITabBarSample`.
+    static let uITabBarSample = _R.storyboard.uITabBarSample()
     
     /// `UIStoryboard(name: "LaunchScreen", bundle: ...)`
     static func launchScreen(_: Void) -> UIStoryboard {
@@ -92,6 +94,11 @@ struct R: Rswift.Validatable {
     /// `UIStoryboard(name: "ScrollViewSample", bundle: ...)`
     static func scrollViewSample(_: Void) -> UIStoryboard {
       return UIStoryboard(resource: R.storyboard.scrollViewSample)
+    }
+    
+    /// `UIStoryboard(name: "UITabBarSample", bundle: ...)`
+    static func uITabBarSample(_: Void) -> UIStoryboard {
+      return UIStoryboard(resource: R.storyboard.uITabBarSample)
     }
     
     private init() {}
@@ -130,8 +137,9 @@ struct _R: Rswift.Validatable {
   
   struct storyboard: Rswift.Validatable {
     static func validate() throws {
-      try main.validate()
       try scrollViewSample.validate()
+      try uITabBarSample.validate()
+      try main.validate()
     }
     
     struct launchScreen: StoryboardResourceWithInitialControllerType {
@@ -179,6 +187,34 @@ struct _R: Rswift.Validatable {
       static func validate() throws {
         if UIImage(named: "ScrollView-Background") == nil { throw ValidationError(description: "[R.swift] Image named 'ScrollView-Background' is used in storyboard 'ScrollViewSample', but couldn't be loaded.") }
         if _R.storyboard.scrollViewSample().scrollZoomViewController() == nil { throw ValidationError(description:"[R.swift] ViewController with identifier 'scrollZoomViewController' could not be loaded from storyboard 'ScrollViewSample' as 'ScrollZoomViewController'.") }
+      }
+      
+      private init() {}
+    }
+    
+    struct uITabBarSample: StoryboardResourceType, Rswift.Validatable {
+      let bundle = _R.hostingBundle
+      let name = "UITabBarSample"
+      let pushHideTabBarController = StoryboardViewControllerResource<PushHideTabBarController>(identifier: "PushHideTabBarController")
+      let uITabBarHideNavigationController = StoryboardViewControllerResource<UITabBarHideNavigationController>(identifier: "UITabBarHideNavigationController")
+      let uITabBarSample1ViewController = StoryboardViewControllerResource<UITabBarSample1ViewController>(identifier: "UITabBarSample1ViewController")
+      
+      func pushHideTabBarController(_: Void) -> PushHideTabBarController? {
+        return UIStoryboard(resource: self).instantiateViewController(pushHideTabBarController)
+      }
+      
+      func uITabBarHideNavigationController(_: Void) -> UITabBarHideNavigationController? {
+        return UIStoryboard(resource: self).instantiateViewController(uITabBarHideNavigationController)
+      }
+      
+      func uITabBarSample1ViewController(_: Void) -> UITabBarSample1ViewController? {
+        return UIStoryboard(resource: self).instantiateViewController(uITabBarSample1ViewController)
+      }
+      
+      static func validate() throws {
+        if _R.storyboard.uITabBarSample().pushHideTabBarController() == nil { throw ValidationError(description:"[R.swift] ViewController with identifier 'pushHideTabBarController' could not be loaded from storyboard 'UITabBarSample' as 'PushHideTabBarController'.") }
+        if _R.storyboard.uITabBarSample().uITabBarHideNavigationController() == nil { throw ValidationError(description:"[R.swift] ViewController with identifier 'uITabBarHideNavigationController' could not be loaded from storyboard 'UITabBarSample' as 'UITabBarHideNavigationController'.") }
+        if _R.storyboard.uITabBarSample().uITabBarSample1ViewController() == nil { throw ValidationError(description:"[R.swift] ViewController with identifier 'uITabBarSample1ViewController' could not be loaded from storyboard 'UITabBarSample' as 'UITabBarSample1ViewController'.") }
       }
       
       private init() {}

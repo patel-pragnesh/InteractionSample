@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		7E0CDBF9C7925F06A0AC165B /* Pods_InteractionSample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96F453D13C35E526D373CB08 /* Pods_InteractionSample.framework */; };
 		BFB9BF0E7B05E6D51B7224D6 /* Pods_InteractionSampleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CBC8AF520D02009BEC7C771 /* Pods_InteractionSampleTests.framework */; };
+		FB895E3B1D12378D001430A5 /* UITabBarSample.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB895E3A1D12378D001430A5 /* UITabBarSample.storyboard */; };
+		FB895E3E1D123871001430A5 /* PushHideTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB895E3D1D123871001430A5 /* PushHideTabBarController.swift */; };
+		FB895E401D1238C3001430A5 /* UITabBarSample1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB895E3F1D1238C3001430A5 /* UITabBarSample1ViewController.swift */; };
+		FB895E441D1239DE001430A5 /* UITabBarType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB895E431D1239DE001430A5 /* UITabBarType.swift */; };
+		FB895E461D123E43001430A5 /* UITabBarHideNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB895E451D123E43001430A5 /* UITabBarHideNavigationController.swift */; };
 		FBB6283F1D10E5F5002711D5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB6283E1D10E5F5002711D5 /* AppDelegate.swift */; };
 		FBB628461D10E5F5002711D5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FBB628451D10E5F5002711D5 /* Assets.xcassets */; };
 		FBB628491D10E5F5002711D5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FBB628471D10E5F5002711D5 /* LaunchScreen.storyboard */; };
@@ -51,6 +56,11 @@
 		8195609B29CB793D87C9B93E /* Pods-InteractionSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InteractionSample.release.xcconfig"; path = "Pods/Target Support Files/Pods-InteractionSample/Pods-InteractionSample.release.xcconfig"; sourceTree = "<group>"; };
 		96F453D13C35E526D373CB08 /* Pods_InteractionSample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InteractionSample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF4E3190677E0DFCECE06B2D /* Pods-InteractionSampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InteractionSampleTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-InteractionSampleTests/Pods-InteractionSampleTests.release.xcconfig"; sourceTree = "<group>"; };
+		FB895E3A1D12378D001430A5 /* UITabBarSample.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = UITabBarSample.storyboard; path = Storyboards/UITabBarSample.storyboard; sourceTree = "<group>"; };
+		FB895E3D1D123871001430A5 /* PushHideTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PushHideTabBarController.swift; path = UITabBarSample/PushHideTabBarController.swift; sourceTree = "<group>"; };
+		FB895E3F1D1238C3001430A5 /* UITabBarSample1ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UITabBarSample1ViewController.swift; path = UITabBarSample/UITabBarSample1ViewController.swift; sourceTree = "<group>"; };
+		FB895E431D1239DE001430A5 /* UITabBarType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UITabBarType.swift; path = UITabBarSample/UITabBarType.swift; sourceTree = "<group>"; };
+		FB895E451D123E43001430A5 /* UITabBarHideNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UITabBarHideNavigationController.swift; path = UITabBarSample/UITabBarHideNavigationController.swift; sourceTree = "<group>"; };
 		FBB6283B1D10E5F5002711D5 /* InteractionSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InteractionSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBB6283E1D10E5F5002711D5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FBB628451D10E5F5002711D5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -122,6 +132,17 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		FB895E3C1D12380D001430A5 /* UITabBarSample */ = {
+			isa = PBXGroup;
+			children = (
+				FB895E431D1239DE001430A5 /* UITabBarType.swift */,
+				FB895E3D1D123871001430A5 /* PushHideTabBarController.swift */,
+				FB895E451D123E43001430A5 /* UITabBarHideNavigationController.swift */,
+				FB895E3F1D1238C3001430A5 /* UITabBarSample1ViewController.swift */,
+			);
+			name = UITabBarSample;
+			sourceTree = "<group>";
+		};
 		FBB628321D10E5F5002711D5 = {
 			isa = PBXGroup;
 			children = (
@@ -149,6 +170,7 @@
 			children = (
 				FBB628721D10E988002711D5 /* Storyboards */,
 				FBB628731D10EA0B002711D5 /* ScrollViewSample */,
+				FB895E3C1D12380D001430A5 /* UITabBarSample */,
 				FBB6287A1D10EB0E002711D5 /* Main */,
 				FBB6286F1D10E816002711D5 /* R.generated.swift */,
 				FBB6283E1D10E5F5002711D5 /* AppDelegate.swift */,
@@ -182,6 +204,7 @@
 			children = (
 				FBB628781D10EB02002711D5 /* Main.storyboard */,
 				FBB628741D10EA3B002711D5 /* ScrollViewSample.storyboard */,
+				FB895E3A1D12378D001430A5 /* UITabBarSample.storyboard */,
 			);
 			name = Storyboards;
 			sourceTree = "<group>";
@@ -352,6 +375,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB895E3B1D12378D001430A5 /* UITabBarSample.storyboard in Resources */,
 				FBB628491D10E5F5002711D5 /* LaunchScreen.storyboard in Resources */,
 				FBB628461D10E5F5002711D5 /* Assets.xcassets in Resources */,
 				FBB628751D10EA3B002711D5 /* ScrollViewSample.storyboard in Resources */,
@@ -501,11 +525,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				FBB628831D10ED18002711D5 /* MainNavigationController.swift in Sources */,
+				FB895E441D1239DE001430A5 /* UITabBarType.swift in Sources */,
 				FBB6283F1D10E5F5002711D5 /* AppDelegate.swift in Sources */,
 				FBB628701D10E816002711D5 /* R.generated.swift in Sources */,
+				FB895E401D1238C3001430A5 /* UITabBarSample1ViewController.swift in Sources */,
 				FBB628931D10F221002711D5 /* ScrollViewType.swift in Sources */,
 				FBB628871D10ED5D002711D5 /* MainSection.swift in Sources */,
+				FB895E3E1D123871001430A5 /* PushHideTabBarController.swift in Sources */,
 				FBB628841D10ED18002711D5 /* MainViewController.swift in Sources */,
+				FB895E461D123E43001430A5 /* UITabBarHideNavigationController.swift in Sources */,
 				FBB628891D10ED95002711D5 /* MainViewModel.swift in Sources */,
 				FBB628911D10F0F2002711D5 /* ScrollZoomViewController.swift in Sources */,
 				FBB628971D10F2ED002711D5 /* MainCell.swift in Sources */,

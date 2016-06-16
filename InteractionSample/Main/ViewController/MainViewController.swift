@@ -33,6 +33,8 @@ class MainViewController: UIViewController {
             switch dataSource.itemAtIndexPath(indexPath) {
             case let .ScrollViewSectionItem(type):
                 return self.configCell(tableView: tableView, indexPath: indexPath, name: type.name)
+            case let .UITabBarSectionItem(type):
+                return self.configCell(tableView: tableView, indexPath: indexPath, name: type.name)
             case let .CollectionViewSectionItem(name):
                 return self.configCell(tableView: tableView, indexPath: indexPath, name: name)
             }
@@ -68,6 +70,10 @@ class MainViewController: UIViewController {
     private func pageControl(sectionItem sectionItem: MainSectionItem) {
         switch sectionItem {
         case let .ScrollViewSectionItem(type):
+            dispatch_async(dispatch_get_main_queue(), {
+                self.presentViewController(type.viewController, animated: true, completion: nil)
+            })
+        case let .UITabBarSectionItem(type):
             dispatch_async(dispatch_get_main_queue(), {
                 self.presentViewController(type.viewController, animated: true, completion: nil)
             })
