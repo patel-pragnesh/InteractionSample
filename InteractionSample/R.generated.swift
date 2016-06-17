@@ -26,30 +26,16 @@ struct R: Rswift.Validatable {
     private init() {}
   }
   
-  /// This `R.image` struct is generated, and contains static references to 4 images.
+  /// This `R.image` struct is generated, and contains static references to 2 images.
   struct image {
     /// Image `ScrollView-Background`.
     static let scrollViewBackground = ImageResource(bundle: _R.hostingBundle, name: "ScrollView-Background")
-    /// Image `ScrollView-Sample1`.
-    static let scrollViewSample1 = ImageResource(bundle: _R.hostingBundle, name: "ScrollView-Sample1")
-    /// Image `ScrollView-Sample2`.
-    static let scrollViewSample2 = ImageResource(bundle: _R.hostingBundle, name: "ScrollView-Sample2")
     /// Image `ScrollView-Sample3`.
     static let scrollViewSample3 = ImageResource(bundle: _R.hostingBundle, name: "ScrollView-Sample3")
     
     /// `UIImage(named: "ScrollView-Background", bundle: ..., traitCollection: ...)`
     static func scrollViewBackground(compatibleWithTraitCollection traitCollection: UITraitCollection? = nil) -> UIImage? {
       return UIImage(resource: R.image.scrollViewBackground, compatibleWithTraitCollection: traitCollection)
-    }
-    
-    /// `UIImage(named: "ScrollView-Sample1", bundle: ..., traitCollection: ...)`
-    static func scrollViewSample1(compatibleWithTraitCollection traitCollection: UITraitCollection? = nil) -> UIImage? {
-      return UIImage(resource: R.image.scrollViewSample1, compatibleWithTraitCollection: traitCollection)
-    }
-    
-    /// `UIImage(named: "ScrollView-Sample2", bundle: ..., traitCollection: ...)`
-    static func scrollViewSample2(compatibleWithTraitCollection traitCollection: UITraitCollection? = nil) -> UIImage? {
-      return UIImage(resource: R.image.scrollViewSample2, compatibleWithTraitCollection: traitCollection)
     }
     
     /// `UIImage(named: "ScrollView-Sample3", bundle: ..., traitCollection: ...)`
@@ -217,8 +203,13 @@ struct _R: Rswift.Validatable {
     struct scrollViewSample: StoryboardResourceType, Rswift.Validatable {
       let bundle = _R.hostingBundle
       let name = "ScrollViewSample"
+      let scrollZoom2ViewController = StoryboardViewControllerResource<ScrollZoom2ViewController>(identifier: "ScrollZoom2ViewController")
       let scrollZoomViewController = StoryboardViewControllerResource<ScrollZoomViewController>(identifier: "ScrollZoomViewController")
       let slideScrollSampleViewController = StoryboardViewControllerResource<SlideScrollSampleViewController>(identifier: "SlideScrollSampleViewController")
+      
+      func scrollZoom2ViewController(_: Void) -> ScrollZoom2ViewController? {
+        return UIStoryboard(resource: self).instantiateViewController(scrollZoom2ViewController)
+      }
       
       func scrollZoomViewController(_: Void) -> ScrollZoomViewController? {
         return UIStoryboard(resource: self).instantiateViewController(scrollZoomViewController)
@@ -231,6 +222,7 @@ struct _R: Rswift.Validatable {
       static func validate() throws {
         if UIImage(named: "ScrollView-Background") == nil { throw ValidationError(description: "[R.swift] Image named 'ScrollView-Background' is used in storyboard 'ScrollViewSample', but couldn't be loaded.") }
         if _R.storyboard.scrollViewSample().scrollZoomViewController() == nil { throw ValidationError(description:"[R.swift] ViewController with identifier 'scrollZoomViewController' could not be loaded from storyboard 'ScrollViewSample' as 'ScrollZoomViewController'.") }
+        if _R.storyboard.scrollViewSample().scrollZoom2ViewController() == nil { throw ValidationError(description:"[R.swift] ViewController with identifier 'scrollZoom2ViewController' could not be loaded from storyboard 'ScrollViewSample' as 'ScrollZoom2ViewController'.") }
         if _R.storyboard.scrollViewSample().slideScrollSampleViewController() == nil { throw ValidationError(description:"[R.swift] ViewController with identifier 'slideScrollSampleViewController' could not be loaded from storyboard 'ScrollViewSample' as 'SlideScrollSampleViewController'.") }
       }
       

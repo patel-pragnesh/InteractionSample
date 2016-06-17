@@ -16,6 +16,7 @@ class MainViewModel {
     private let sections: [MainSection] = [
         .ScrollViewSetion(title: "scrollView Interactions", items: [
                 .ScrollViewSectionItem(type: .ScrollZoom),
+                .ScrollViewSectionItem(type: .ScrollZoom2),
                 .ScrollViewSectionItem(type: .SlideScroll)
             ]),
         .UITabBarSection(title: "UITabBar Interactions", items: [

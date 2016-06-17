@@ -11,6 +11,7 @@
 		BFB9BF0E7B05E6D51B7224D6 /* Pods_InteractionSampleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CBC8AF520D02009BEC7C771 /* Pods_InteractionSampleTests.framework */; };
 		FB1D243E1D1288A500EAE280 /* ScrollHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1D243D1D1288A500EAE280 /* ScrollHeaderView.swift */; };
 		FB1D24401D1288B800EAE280 /* ScrollHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB1D243F1D1288B800EAE280 /* ScrollHeaderView.xib */; };
+		FB62620A1D13F7640075E507 /* ScrollZoom2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6262091D13F7640075E507 /* ScrollZoom2ViewController.swift */; };
 		FB895E3B1D12378D001430A5 /* UITabBarSample.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB895E3A1D12378D001430A5 /* UITabBarSample.storyboard */; };
 		FB895E3E1D123871001430A5 /* PushHideTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB895E3D1D123871001430A5 /* PushHideTabBarController.swift */; };
 		FB895E401D1238C3001430A5 /* UITabBarSample1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB895E3F1D1238C3001430A5 /* UITabBarSample1ViewController.swift */; };
@@ -61,6 +62,7 @@
 		CF4E3190677E0DFCECE06B2D /* Pods-InteractionSampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InteractionSampleTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-InteractionSampleTests/Pods-InteractionSampleTests.release.xcconfig"; sourceTree = "<group>"; };
 		FB1D243D1D1288A500EAE280 /* ScrollHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ScrollHeaderView.swift; path = ScrollViewSample/Parts/ScrollHeaderView.swift; sourceTree = "<group>"; };
 		FB1D243F1D1288B800EAE280 /* ScrollHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ScrollHeaderView.xib; path = ScrollViewSample/Parts/ScrollHeaderView.xib; sourceTree = "<group>"; };
+		FB6262091D13F7640075E507 /* ScrollZoom2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ScrollZoom2ViewController.swift; path = ScrollViewSample/ScrollZoom2ViewController.swift; sourceTree = "<group>"; };
 		FB895E3A1D12378D001430A5 /* UITabBarSample.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = UITabBarSample.storyboard; path = Storyboards/UITabBarSample.storyboard; sourceTree = "<group>"; };
 		FB895E3D1D123871001430A5 /* PushHideTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PushHideTabBarController.swift; path = UITabBarSample/PushHideTabBarController.swift; sourceTree = "<group>"; };
 		FB895E3F1D1238C3001430A5 /* UITabBarSample1ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UITabBarSample1ViewController.swift; path = UITabBarSample/UITabBarSample1ViewController.swift; sourceTree = "<group>"; };
@@ -230,6 +232,7 @@
 				FB1D243C1D12886B00EAE280 /* Parts */,
 				FBB628921D10F221002711D5 /* ScrollViewType.swift */,
 				FBB628901D10F0F2002711D5 /* ScrollZoomViewController.swift */,
+				FB6262091D13F7640075E507 /* ScrollZoom2ViewController.swift */,
 				FB91C0421D12856E00EBEA37 /* SlideScrollSampleViewController.swift */,
 			);
 			name = ScrollViewSample;
@@ -557,6 +560,7 @@
 				FBB628891D10ED95002711D5 /* MainViewModel.swift in Sources */,
 				FBB628911D10F0F2002711D5 /* ScrollZoomViewController.swift in Sources */,
 				FBB628971D10F2ED002711D5 /* MainCell.swift in Sources */,
+				FB62620A1D13F7640075E507 /* ScrollZoom2ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
