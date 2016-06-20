@@ -12,6 +12,8 @@
 		FB1D243E1D1288A500EAE280 /* ScrollHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1D243D1D1288A500EAE280 /* ScrollHeaderView.swift */; };
 		FB1D24401D1288B800EAE280 /* ScrollHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB1D243F1D1288B800EAE280 /* ScrollHeaderView.xib */; };
 		FB62620A1D13F7640075E507 /* ScrollZoom2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6262091D13F7640075E507 /* ScrollZoom2ViewController.swift */; };
+		FB62620F1D17BAF90075E507 /* ScrollZoom2Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB62620D1D17BAF90075E507 /* ScrollZoom2Cell.swift */; };
+		FB6262101D17BAF90075E507 /* ScrollZoom2Cell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB62620E1D17BAF90075E507 /* ScrollZoom2Cell.xib */; };
 		FB895E3B1D12378D001430A5 /* UITabBarSample.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB895E3A1D12378D001430A5 /* UITabBarSample.storyboard */; };
 		FB895E3E1D123871001430A5 /* PushHideTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB895E3D1D123871001430A5 /* PushHideTabBarController.swift */; };
 		FB895E401D1238C3001430A5 /* UITabBarSample1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB895E3F1D1238C3001430A5 /* UITabBarSample1ViewController.swift */; };
@@ -63,6 +65,8 @@
 		FB1D243D1D1288A500EAE280 /* ScrollHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ScrollHeaderView.swift; path = ScrollViewSample/Parts/ScrollHeaderView.swift; sourceTree = "<group>"; };
 		FB1D243F1D1288B800EAE280 /* ScrollHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ScrollHeaderView.xib; path = ScrollViewSample/Parts/ScrollHeaderView.xib; sourceTree = "<group>"; };
 		FB6262091D13F7640075E507 /* ScrollZoom2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ScrollZoom2ViewController.swift; path = ScrollViewSample/ScrollZoom2ViewController.swift; sourceTree = "<group>"; };
+		FB62620D1D17BAF90075E507 /* ScrollZoom2Cell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ScrollZoom2Cell.swift; path = ScrollViewSample/Parts/ScrollZoom2Cell.swift; sourceTree = "<group>"; };
+		FB62620E1D17BAF90075E507 /* ScrollZoom2Cell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ScrollZoom2Cell.xib; path = ScrollViewSample/Parts/ScrollZoom2Cell.xib; sourceTree = "<group>"; };
 		FB895E3A1D12378D001430A5 /* UITabBarSample.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = UITabBarSample.storyboard; path = Storyboards/UITabBarSample.storyboard; sourceTree = "<group>"; };
 		FB895E3D1D123871001430A5 /* PushHideTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PushHideTabBarController.swift; path = UITabBarSample/PushHideTabBarController.swift; sourceTree = "<group>"; };
 		FB895E3F1D1238C3001430A5 /* UITabBarSample1ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UITabBarSample1ViewController.swift; path = UITabBarSample/UITabBarSample1ViewController.swift; sourceTree = "<group>"; };
@@ -145,6 +149,8 @@
 			children = (
 				FB1D243D1D1288A500EAE280 /* ScrollHeaderView.swift */,
 				FB1D243F1D1288B800EAE280 /* ScrollHeaderView.xib */,
+				FB62620D1D17BAF90075E507 /* ScrollZoom2Cell.swift */,
+				FB62620E1D17BAF90075E507 /* ScrollZoom2Cell.xib */,
 			);
 			name = Parts;
 			sourceTree = "<group>";
@@ -397,6 +403,7 @@
 			files = (
 				FB895E3B1D12378D001430A5 /* UITabBarSample.storyboard in Resources */,
 				FB1D24401D1288B800EAE280 /* ScrollHeaderView.xib in Resources */,
+				FB6262101D17BAF90075E507 /* ScrollZoom2Cell.xib in Resources */,
 				FBB628491D10E5F5002711D5 /* LaunchScreen.storyboard in Resources */,
 				FBB628461D10E5F5002711D5 /* Assets.xcassets in Resources */,
 				FBB628751D10EA3B002711D5 /* ScrollViewSample.storyboard in Resources */,
@@ -552,6 +559,7 @@
 				FB895E401D1238C3001430A5 /* UITabBarSample1ViewController.swift in Sources */,
 				FBB628931D10F221002711D5 /* ScrollViewType.swift in Sources */,
 				FBB628871D10ED5D002711D5 /* MainSection.swift in Sources */,
+				FB62620F1D17BAF90075E507 /* ScrollZoom2Cell.swift in Sources */,
 				FB895E3E1D123871001430A5 /* PushHideTabBarController.swift in Sources */,
 				FBB628841D10ED18002711D5 /* MainViewController.swift in Sources */,
 				FB1D243E1D1288A500EAE280 /* ScrollHeaderView.swift in Sources */,

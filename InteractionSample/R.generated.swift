@@ -26,16 +26,30 @@ struct R: Rswift.Validatable {
     private init() {}
   }
   
-  /// This `R.image` struct is generated, and contains static references to 2 images.
+  /// This `R.image` struct is generated, and contains static references to 4 images.
   struct image {
     /// Image `ScrollView-Background`.
     static let scrollViewBackground = ImageResource(bundle: _R.hostingBundle, name: "ScrollView-Background")
+    /// Image `ScrollView-Sample1`.
+    static let scrollViewSample1 = ImageResource(bundle: _R.hostingBundle, name: "ScrollView-Sample1")
+    /// Image `ScrollView-Sample2`.
+    static let scrollViewSample2 = ImageResource(bundle: _R.hostingBundle, name: "ScrollView-Sample2")
     /// Image `ScrollView-Sample3`.
     static let scrollViewSample3 = ImageResource(bundle: _R.hostingBundle, name: "ScrollView-Sample3")
     
     /// `UIImage(named: "ScrollView-Background", bundle: ..., traitCollection: ...)`
     static func scrollViewBackground(compatibleWithTraitCollection traitCollection: UITraitCollection? = nil) -> UIImage? {
       return UIImage(resource: R.image.scrollViewBackground, compatibleWithTraitCollection: traitCollection)
+    }
+    
+    /// `UIImage(named: "ScrollView-Sample1", bundle: ..., traitCollection: ...)`
+    static func scrollViewSample1(compatibleWithTraitCollection traitCollection: UITraitCollection? = nil) -> UIImage? {
+      return UIImage(resource: R.image.scrollViewSample1, compatibleWithTraitCollection: traitCollection)
+    }
+    
+    /// `UIImage(named: "ScrollView-Sample2", bundle: ..., traitCollection: ...)`
+    static func scrollViewSample2(compatibleWithTraitCollection traitCollection: UITraitCollection? = nil) -> UIImage? {
+      return UIImage(resource: R.image.scrollViewSample2, compatibleWithTraitCollection: traitCollection)
     }
     
     /// `UIImage(named: "ScrollView-Sample3", bundle: ..., traitCollection: ...)`
@@ -54,12 +68,14 @@ struct R: Rswift.Validatable {
     private init() {}
   }
   
-  /// This `R.nib` struct is generated, and contains static references to 2 nibs.
+  /// This `R.nib` struct is generated, and contains static references to 3 nibs.
   struct nib {
     /// Nib `MainCell`.
     static let mainCell = _R.nib._MainCell()
     /// Nib `ScrollHeaderView`.
     static let scrollHeaderView = _R.nib._ScrollHeaderView()
+    /// Nib `ScrollZoom2Cell`.
+    static let scrollZoom2Cell = _R.nib._ScrollZoom2Cell()
     
     /// `UINib(name: "MainCell", bundle: ...)`
     static func mainCell(_: Void) -> UINib {
@@ -69,6 +85,11 @@ struct R: Rswift.Validatable {
     /// `UINib(name: "ScrollHeaderView", bundle: ...)`
     static func scrollHeaderView(_: Void) -> UINib {
       return UINib(resource: R.nib.scrollHeaderView)
+    }
+    
+    /// `UINib(name: "ScrollZoom2Cell", bundle: ...)`
+    static func scrollZoom2Cell(_: Void) -> UINib {
+      return UINib(resource: R.nib.scrollZoom2Cell)
     }
     
     private init() {}
@@ -152,6 +173,17 @@ struct _R: Rswift.Validatable {
       
       func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [NSObject : AnyObject]? = nil) -> UIView? {
         return instantiateWithOwner(ownerOrNil, options: optionsOrNil)[0] as? UIView
+      }
+      
+      private init() {}
+    }
+    
+    struct _ScrollZoom2Cell: NibResourceType {
+      let bundle = _R.hostingBundle
+      let name = "ScrollZoom2Cell"
+      
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [NSObject : AnyObject]? = nil) -> ScrollZoom2Cell? {
+        return instantiateWithOwner(ownerOrNil, options: optionsOrNil)[0] as? ScrollZoom2Cell
       }
       
       private init() {}
