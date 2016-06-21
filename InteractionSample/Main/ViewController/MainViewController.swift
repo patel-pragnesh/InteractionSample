@@ -35,6 +35,8 @@ class MainViewController: UIViewController {
                 return self.configCell(tableView: tableView, indexPath: indexPath, name: type.name)
             case let .UITabBarSectionItem(type):
                 return self.configCell(tableView: tableView, indexPath: indexPath, name: type.name)
+            case let .APIHandlingSectionItem(name):
+                return self.configCell(tableView: tableView, indexPath: indexPath, name: name)
             case let .CollectionViewSectionItem(name):
                 return self.configCell(tableView: tableView, indexPath: indexPath, name: name)
             }
@@ -76,6 +78,11 @@ class MainViewController: UIViewController {
         case let .UITabBarSectionItem(type):
             dispatch_async(dispatch_get_main_queue(), {
                 self.presentViewController(type.viewController, animated: true, completion: nil)
+            })
+        case .APIHandlingSectionItem(_):
+            guard let vc = R.storyboard.aPIHandling.aPIHandlingViewController() else { return }
+            dispatch_async(dispatch_get_main_queue(), {
+                self.presentViewController(vc, animated: true, completion: nil)
             })
         default:
             print("no page")

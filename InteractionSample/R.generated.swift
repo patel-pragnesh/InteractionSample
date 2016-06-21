@@ -68,14 +68,21 @@ struct R: Rswift.Validatable {
     private init() {}
   }
   
-  /// This `R.nib` struct is generated, and contains static references to 3 nibs.
+  /// This `R.nib` struct is generated, and contains static references to 4 nibs.
   struct nib {
+    /// Nib `APIHandlingListCell`.
+    static let aPIHandlingListCell = _R.nib._APIHandlingListCell()
     /// Nib `MainCell`.
     static let mainCell = _R.nib._MainCell()
     /// Nib `ScrollHeaderView`.
     static let scrollHeaderView = _R.nib._ScrollHeaderView()
     /// Nib `ScrollZoom2Cell`.
     static let scrollZoom2Cell = _R.nib._ScrollZoom2Cell()
+    
+    /// `UINib(name: "APIHandlingListCell", bundle: ...)`
+    static func aPIHandlingListCell(_: Void) -> UINib {
+      return UINib(resource: R.nib.aPIHandlingListCell)
+    }
     
     /// `UINib(name: "MainCell", bundle: ...)`
     static func mainCell(_: Void) -> UINib {
@@ -105,8 +112,10 @@ struct R: Rswift.Validatable {
     private init() {}
   }
   
-  /// This `R.storyboard` struct is generated, and contains static references to 4 storyboards.
+  /// This `R.storyboard` struct is generated, and contains static references to 5 storyboards.
   struct storyboard {
+    /// Storyboard `APIHandling`.
+    static let aPIHandling = _R.storyboard.aPIHandling()
     /// Storyboard `LaunchScreen`.
     static let launchScreen = _R.storyboard.launchScreen()
     /// Storyboard `Main`.
@@ -115,6 +124,11 @@ struct R: Rswift.Validatable {
     static let scrollViewSample = _R.storyboard.scrollViewSample()
     /// Storyboard `UITabBarSample`.
     static let uITabBarSample = _R.storyboard.uITabBarSample()
+    
+    /// `UIStoryboard(name: "APIHandling", bundle: ...)`
+    static func aPIHandling(_: Void) -> UIStoryboard {
+      return UIStoryboard(resource: R.storyboard.aPIHandling)
+    }
     
     /// `UIStoryboard(name: "LaunchScreen", bundle: ...)`
     static func launchScreen(_: Void) -> UIStoryboard {
@@ -156,6 +170,17 @@ struct _R: Rswift.Validatable {
   }
   
   struct nib {
+    struct _APIHandlingListCell: NibResourceType {
+      let bundle = _R.hostingBundle
+      let name = "APIHandlingListCell"
+      
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [NSObject : AnyObject]? = nil) -> APIHandlingListCell? {
+        return instantiateWithOwner(ownerOrNil, options: optionsOrNil)[0] as? APIHandlingListCell
+      }
+      
+      private init() {}
+    }
+    
     struct _MainCell: NibResourceType {
       let bundle = _R.hostingBundle
       let name = "MainCell"
@@ -196,7 +221,24 @@ struct _R: Rswift.Validatable {
     static func validate() throws {
       try scrollViewSample.validate()
       try uITabBarSample.validate()
+      try aPIHandling.validate()
       try main.validate()
+    }
+    
+    struct aPIHandling: StoryboardResourceType, Rswift.Validatable {
+      let aPIHandlingViewController = StoryboardViewControllerResource<APIHandlingViewController>(identifier: "APIHandlingViewController")
+      let bundle = _R.hostingBundle
+      let name = "APIHandling"
+      
+      func aPIHandlingViewController(_: Void) -> APIHandlingViewController? {
+        return UIStoryboard(resource: self).instantiateViewController(aPIHandlingViewController)
+      }
+      
+      static func validate() throws {
+        if _R.storyboard.aPIHandling().aPIHandlingViewController() == nil { throw ValidationError(description:"[R.swift] ViewController with identifier 'aPIHandlingViewController' could not be loaded from storyboard 'APIHandling' as 'APIHandlingViewController'.") }
+      }
+      
+      private init() {}
     }
     
     struct launchScreen: StoryboardResourceWithInitialControllerType {

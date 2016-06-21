@@ -84,14 +84,18 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_framework "Pods-InteractionSample/Alamofire.framework"
   install_framework "Pods-InteractionSample/Rswift.framework"
   install_framework "Pods-InteractionSample/RxCocoa.framework"
   install_framework "Pods-InteractionSample/RxDataSources.framework"
   install_framework "Pods-InteractionSample/RxSwift.framework"
+  install_framework "Pods-InteractionSample/SVProgressHUD.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_framework "Pods-InteractionSample/Alamofire.framework"
   install_framework "Pods-InteractionSample/Rswift.framework"
   install_framework "Pods-InteractionSample/RxCocoa.framework"
   install_framework "Pods-InteractionSample/RxDataSources.framework"
   install_framework "Pods-InteractionSample/RxSwift.framework"
+  install_framework "Pods-InteractionSample/SVProgressHUD.framework"
 fi

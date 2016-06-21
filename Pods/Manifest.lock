@@ -1,4 +1,5 @@
 PODS:
+  - Alamofire (3.4.1)
   - R.swift (2.3.0):
     - R.swift.Library (~> 2.1.0)
   - R.swift.Library (2.1.0)
@@ -12,16 +13,20 @@ PODS:
   - RxSwift (2.5.0)
   - RxTests (2.5.0):
     - RxSwift (~> 2.5)
+  - SVProgressHUD (2.0.3)
 
 DEPENDENCIES:
+  - Alamofire (~> 3.4)
   - R.swift
   - RxBlocking (~> 2.0)
   - RxCocoa (~> 2.0)
   - RxDataSources (~> 0.7)
   - RxSwift (~> 2.0)
   - RxTests (~> 2.0)
+  - SVProgressHUD
 
 SPEC CHECKSUMS:
+  Alamofire: 01a82e2f6c0f860ade35534c8dd88be61bdef40c
   R.swift: 38b2191a603c3d491a09baddfb4ccc7aa9be4d9d
   R.swift.Library: e5e077ed04f6867a95676af491650091b23518e9
   RxBlocking: 595d9ab56dde6b00beaa5aba40e95b150d2135f1
@@ -29,5 +34,6 @@ SPEC CHECKSUMS:
   RxDataSources: 4a87345847d66ef84ecc10bdfa189190f3cd6b12
   RxSwift: 402b41a50e922a0368fc14cb3bc9f4427920e8ae
   RxTests: 1b13bea0a138552b52aeead549ef08d578bcda9e
+  SVProgressHUD: b0830714205bea1317ea1a2ebc71e5633af334d4
 
 COCOAPODS: 0.39.0

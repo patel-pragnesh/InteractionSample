@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Alamofire.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-InteractionSample.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -44,50 +49,35 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>SVProgressHUD.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>38846853E556B90337A4D6E07553C89A</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>3B68239B53E48F9744040B0111615B49</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>5DDC3D6CA776D9E12CCAE511FC5B3F2F</key>
+		<key>586F7BE9436E5DFCD0D41633370E5152</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>6CC2F437EB44A3C3A599D2D25D936C52</key>
+		<key>5C0B61BB87C338A05AACD3086B98DF7A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>6EF6DA7597E5125094392EDF6912860C</key>
+		<key>6B85BF0B90D162A70EA5BB9A7CEF60C7</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>7C5D7B2C3108A1213A65D43575C442D5</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>83DFBCDE0688ACB62DFE43F847FD6C93</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>8D84F38AB5C16BAB1038FFF8237D4385</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>94CACE48785D003E804A77C978338045</key>
+		<key>79C040AFDDCE1BCBF6D8B5EB0B85887F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -102,7 +92,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>D44685ABC111390C16FC6B7CA997E045</key>
+		<key>DA58ECAEBF05CFAED5C1596C26BA3358</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E1B94D134F734E7CD1E8CA8948D21366</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FEFE48D1986FA74E0826A949C8338008</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -6,6 +6,8 @@ target 'InteractionSample' do
     pod 'RxCocoa',    '~> 2.0'
     pod 'R.swift'
     pod 'RxDataSources', '~> 0.7'
+    pod 'Alamofire', '~> 3.4'
+    pod 'SVProgressHUD'
 end
 
 target 'InteractionSampleTests' do

@@ -21,6 +21,9 @@ class MainViewModel {
             ]),
         .UITabBarSection(title: "UITabBar Interactions", items: [
                 .UITabBarSectionItem(type: .TabBarHide)
+            ]),
+        .APIHandlingSection(title: "API Handling", items: [
+            .APIHandlingSectionItem(name: "API Handling")
             ])
     ]
     
